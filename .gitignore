@@ -1,0 +1,80 @@
+# ====================================================================
+# STRICT SECURITY WHITELIST .gitignore
+# ====================================================================
+# Default deny: Ignore everything by default to prevent ANY secret leak
+# ====================================================================
+*
+
+# Whitelist directories
+!*/
+
+# Whitelist public sanitized documentation & text catalogs
+!README.md
+!INSTALLATION_AND_USAGE_GUIDE.md
+!MUNDER_DIFFLIN_COMMAND_CENTER_SETUP.md
+!FREE_AI_APIS_MASTER_CATALOG.txt
+!AI_FOR_API_DIRECTORY.md
+!FREE_AI_APIS_NO_CARD_NO_LOGIN.md
+!FREE_AI_PROVIDERS_MASTER_GUIDE.md
+!NO_AUTH_ZERO_LOGIN_APIS.md
+!LICENSE
+
+# Whitelist installer and launcher scripts
+!install.py
+!install.bat
+!START_MUNDER_DIFFLIN_AUTO.bat
+!requirements.txt
+
+# Whitelist application source code (sanitized, zero hardcoded keys)
+!munder_command_center.py
+!munder_autonomous_daemon.py
+!MUNDER_DIFFLIN_AUTONOMOUS_DAEMON.py
+
+# Whitelist template files (ONLY templates, NEVER real keys)
+!API_KEYS_TEMPLATE.txt
+!API_KEYS.example.env
+
+# Whitelist git files
+!.gitignore
+
+# ====================================================================
+# EXPLICIT BLACKLIST (Double-protection against accidental inclusions)
+# ====================================================================
+*.key
+*.pem
+*.sqlite
+*.db
+*.log
+.env
+.env.*
+!.env.example
+API_KEYS.txt
+*API_KEYS_ORGANIZED*.txt
+*ALL_PROVIDERS_ARRANGED*.txt
+*Api Keys*.txt
+*Api Keys*.md
+*Api's.txt
+*Api.txt
+*Api with token.txt
+*Api of omniroute.txt
+USER_API_KEYS.json
+USER_DECRYPTED_API_KEYS.txt
+FREE_AI_TEST_RESULTS.txt
+FULL_AUTO_TEST_RESULTS.json
+OMNIROUTE_BATCH_TEST_RESULTS.json
+test_results.json
+providers_catalog_data.json
+All Ness to add .txt
+links.txt
+Prompt.txt
+PROMPTS_AND_SETUP.md
+TEST_ALL_KEYS_FULLY_AUTO.py
+AUTO_TEST_ALL_PROVIDERS.py
+AUTONOMOUS_FLOOR_RUNNER.py
+test_free_apis.py
+update_omniroute_keys.py
+__pycache__/
+.system_generated/
+scratch/
+node_modules/
+munder-difflin/

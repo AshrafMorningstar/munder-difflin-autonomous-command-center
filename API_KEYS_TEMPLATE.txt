@@ -1,0 +1,55 @@
+# ==============================================================================
+# 🔑 MUNDER DIFFLIN COMMAND CENTER - API KEYS & GATEWAYS TEMPLATE
+# ==============================================================================
+# Instructions:
+# 1. Copy this file and name it 'API_KEYS.txt' (or '.env').
+# 2. Add your keys below.
+# 3. This file is safely excluded from Git by .gitignore.
+# ==============================================================================
+
+[GATEWAYS]
+# OmniRoute AI Gateway (Local OpenAI compatible endpoint)
+# Default port: 20128
+OMNIROUTE_URL=http://localhost:20128/v1
+OMNIROUTE_API_KEY=your_omniroute_key_here
+
+# FreeLLMAPI Unified Gateway (Local Anthropic & OpenAI compatible endpoint)
+# Default port: 31415
+FREELLMAPI_URL=http://127.0.0.1:31415
+FREELLMAPI_API_KEY=your_freellmapi_key_here
+
+[DIRECT_CLOUD_PROVIDERS]
+# OpenAI API
+OPENAI_API_KEY=your_openai_api_key_here
+
+# Anthropic Claude API
+ANTHROPIC_API_KEY=your_anthropic_api_key_here
+
+# Google Gemini API (Free tier available)
+GEMINI_API_KEY=your_gemini_api_key_here
+
+# Groq Cloud API (Ultra-fast Llama-3 & Mixtral inference, free tier)
+GROQ_API_KEY=your_groq_api_key_here
+
+# OpenRouter (Aggregated provider with 50+ free models)
+OPENROUTER_API_KEY=your_openrouter_api_key_here
+
+# SambaNova Cloud (High-speed free Llama 3.1 70B & 405B)
+SAMBANOVA_API_KEY=your_sambanova_api_key_here
+
+# SiliconFlow API (Free DeepSeek & Qwen models)
+SILICONFLOW_API_KEY=your_siliconflow_api_key_here
+
+# Cerebras Cloud (World's fastest inference)
+CEREBRAS_API_KEY=your_cerebras_api_key_here
+
+[OFFICE_FLOOR_SETTINGS]
+# Path to your Munder Difflin multi-agent hive workspace
+# Windows default: F:\Ashraf\Tools\hive or %USERPROFILE%\munder-hive
+HIVE_ROOT=F:\Ashraf\Tools\hive
+
+# Autonomous loop cycle interval in seconds (default: 3)
+DAEMON_CYCLE_SECONDS=3
+
+# Headless / Zero-click mode (True = no manual confirmation popups)
+ZERO_CLICK_AUTO_MODE=true

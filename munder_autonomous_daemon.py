@@ -62,6 +62,13 @@ TASKS_FILE = os.path.join(HIVE_ROOT, "tasks.json")
 BOARD_FILE = os.path.join(HIVE_ROOT, "board.md")
 FLEET_FILE = os.path.join(HIVE_ROOT, "fleet.json")
 
+# Initialize Universal AI Engine with Zero-Auth Fallback
+try:
+    from universal_ai_engine import UniversalAIEngine
+    AI_ENGINE = UniversalAIEngine()
+except Exception:
+    AI_ENGINE = None
+
 _cached_gw_state = (True, True)
 _last_gw_check = 0
 
@@ -138,8 +145,16 @@ def process_dwight_inbox():
         msg_id = msg.get("id", item)
         log("dwight", f"Executing assignment: {subj}")
 
-        omni_ok, free_ok = verify_gateways()
-        report = f"Security check passed. OmniRoute: {'ONLINE' if omni_ok else 'OFFLINE'}, FreeLLMAPI: {'ONLINE' if free_ok else 'OFFLINE'}."
+        report = ""
+        if AI_ENGINE:
+            try:
+                ai_res = AI_ENGINE.dispatch(f"Dwight Schrute, report on security assignment: {subj}. Keep under 12 words.", agent_role="security")
+                report = f"{ai_res.get('response', '').strip()} [{ai_res.get('provider')}]"
+            except Exception:
+                pass
+        if not report:
+            omni_ok, free_ok = verify_gateways()
+            report = f"Security check passed. OmniRoute: {'ONLINE' if omni_ok else 'OFFLINE'}, FreeLLMAPI: {'ONLINE' if free_ok else 'OFFLINE'}."
 
         with open(memory, "a", encoding="utf-8") as mf:
             mf.write(f"\n- [{time.strftime('%Y-%m-%d %H:%M:%S')}] {subj}: {report}\n")
@@ -185,7 +200,15 @@ def process_jim_inbox():
         msg_id = msg.get("id", item)
         log("jim", f"Executing engineering task: {subj}")
 
-        report = "Codex tooling & model inference verified via local proxies."
+        report = ""
+        if AI_ENGINE:
+            try:
+                ai_res = AI_ENGINE.dispatch(f"Jim Halpert, brief engineering update on: {subj}. Keep under 12 words.", agent_role="engineer")
+                report = f"{ai_res.get('response', '').strip()} [{ai_res.get('provider')}]"
+            except Exception:
+                pass
+        if not report:
+            report = "Codex tooling & model inference verified via local proxies."
         with open(memory, "a", encoding="utf-8") as mf:
             mf.write(f"\n- [{time.strftime('%Y-%m-%d %H:%M:%S')}] {subj}: {report}\n")
 

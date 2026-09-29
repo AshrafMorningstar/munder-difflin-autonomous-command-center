@@ -42,14 +42,16 @@ By integrating **OmniRoute** (OpenAI-compatible multi-provider routing) and **Fr
 
 ---
 
-##  Key Features
+## ⚡ Key Features
 
--  **100% Zero-Click Autonomy**: Runs unattended 24/7. Auto-detects completed tickets, auto-advances work queues, and handles heartbeats with zero user confirmation clicks.
--  **Intelligent AI Gateway Failover**: Routes requests dynamically across **OmniRoute** (`http://localhost:20128`) and **FreeLLMAPI** (`http://127.0.0.1:31415`).
--  **Atomic High-Throughput Draining**: Built with atomic `os.replace` filesystem operations capable of draining thousands of backlog messages per second.
--  **Zero-Leak Secret Architecture**: Whitelisted security design guarantees that your actual API keys are never tracked or committed to Git.
--  **Automated 1-Click Installer**: Automatically configures dependencies, scaffolding directories, and gateway connections across Windows, macOS, and Linux.
--  **Includes Free AI APIs Master Catalog**: Complete verified index of zero-card and zero-login free LLM providers (Groq, Gemini, Cerebras, Pollinations, SambaNova, OpenRouter).
+- 🆓 **Zero-Auth Default Out-of-the-Box**: Zero setup, zero signup, zero credit card, zero API keys required! Every person who clones this repository can immediately launch the office floor with instant public AI inference (powered by Pollinations AI).
+- 🚀 **100% Zero-Click Autonomy**: Runs unattended 24/7. Auto-detects completed tickets, auto-advances work queues, and handles heartbeats with zero user confirmation clicks.
+- 🔄 **Intelligent Universal AI Dispatcher (`universal_ai_engine.py`)**: Seamlessly distributes tasks across **OmniRoute** (`http://localhost:20128`), **FreeLLMAPI** (`http://127.0.0.1:31415`), Google Gemini, and Groq Cloud, auto-failing over to Zero-Auth Pollinations AI with zero disruption.
+- 🎙️ **Voice Push-To-Talk Support**: Preconfigured for instant voice dictation in Munder Difflin powered by Groq's `whisper-large-v3-turbo`.
+- ⚡ **Atomic High-Throughput Draining**: Built with atomic `os.replace` filesystem operations capable of draining thousands of backlog messages per second.
+- 🛡️ **Zero-Leak Secret Architecture**: Whitelisted security design guarantees that your personal API keys are never tracked or committed to Git.
+- 📦 **Automated 1-Click Installer**: Automatically configures dependencies, scaffolding directories, and gateway connections across Windows, macOS, and Linux.
+- 🎁 **Includes Free AI APIs Master Catalog**: Complete verified index of zero-card and zero-login free LLM providers (Groq, Gemini, Cerebras, Pollinations, SambaNova, OpenRouter).
 
 ---
 

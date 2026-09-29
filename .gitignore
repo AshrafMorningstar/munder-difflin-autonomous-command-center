@@ -29,6 +29,7 @@
 !munder_command_center.py
 !munder_autonomous_daemon.py
 !MUNDER_DIFFLIN_AUTONOMOUS_DAEMON.py
+!universal_ai_engine.py
 
 # Whitelist template files (ONLY templates, NEVER real keys)
 !API_KEYS_TEMPLATE.txt
@@ -87,3 +88,4 @@ __pycache__/
 scratch/
 node_modules/
 munder-difflin/
+personal_vault/

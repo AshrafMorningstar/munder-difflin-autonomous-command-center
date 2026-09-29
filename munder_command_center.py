@@ -123,44 +123,12 @@ def print_status():
     print("=" * 70)
 
 def test_gateways():
-    cfg = get_config()
-    print("\n🔍 PROBING AI GATEWAYS & ENDPOINTS...")
-    print("-" * 70)
-
-    # 1. OmniRoute
-    omni_root = cfg["OMNIROUTE_URL"].replace("/v1", "")
-    print(f" [*] Probing OmniRoute Gateway ({omni_root})...", end="", flush=True)
-    start = time.time()
     try:
-        req = urllib.request.Request(f"{omni_root}/", headers={"User-Agent": "MunderCLI/1.0"})
-        with urllib.request.urlopen(req, timeout=3) as resp:
-            elapsed = time.time() - start
-            print(f" [ONLINE] (HTTP {resp.status}, {elapsed*1000:.1f}ms)")
+        from universal_ai_engine import UniversalAIEngine
+        engine = UniversalAIEngine()
+        engine.test_all_providers()
     except Exception as e:
-        print(f" [OFFLINE] ({e})")
-
-    # 2. FreeLLMAPI
-    print(f" [*] Probing FreeLLMAPI Gateway ({cfg['FREELLMAPI_URL']})...", end="", flush=True)
-    start = time.time()
-    try:
-        headers = {"User-Agent": "MunderCLI/1.0"}
-        if cfg["FREELLMAPI_KEY"]:
-            headers["x-api-key"] = cfg["FREELLMAPI_KEY"]
-            headers["Authorization"] = f"Bearer {cfg['FREELLMAPI_KEY']}"
-        req = urllib.request.Request(f"{cfg['FREELLMAPI_URL']}/v1/models", headers=headers)
-        with urllib.request.urlopen(req, timeout=3) as resp:
-            elapsed = time.time() - start
-            print(f" [ONLINE] (HTTP {resp.status}, {elapsed*1000:.1f}ms)")
-    except urllib.error.HTTPError as e:
-        elapsed = time.time() - start
-        if e.code in (200, 401, 404):
-            print(f" [ONLINE] (HTTP {e.code}, {elapsed*1000:.1f}ms)")
-        else:
-            print(f" [OFFLINE] (HTTP {e.code})")
-    except Exception as e:
-        print(f" [OFFLINE] ({e})")
-
-    print("-" * 70)
+        print(f"[!] Error running Universal AI Engine audit: {e}")
 
 def drain_inboxes():
     cfg = get_config()

@@ -135,32 +135,24 @@ def main():
         print("  [OK] Created initial board.md")
 
     # 5. Check API Keys Config File
-    step("Configuring API Keys File")
+    step("Configuring API Keys File (Zero-Auth Default Active)")
     key_template = os.path.join(os.path.dirname(__file__), "API_KEYS_TEMPLATE.txt")
     user_keys = os.path.join(os.path.dirname(__file__), "API_KEYS.txt")
     if not os.path.exists(user_keys) and os.path.exists(key_template):
         shutil.copy(key_template, user_keys)
-        print("  [OK] Created API_KEYS.txt from template. You can add your custom keys there.")
+        print("  [OK] Created API_KEYS.txt from template.")
     else:
         print("  [OK] API_KEYS.txt is ready.")
+    print("  [NOTE] Zero-Auth AI is enabled by default. Entering keys is 100% optional!")
 
-    # 6. Gateway Connectivity Check
-    step("Checking Gateway Availability")
-    print("  * Checking OmniRoute at http://localhost:20128 ...")
+    # 6. Gateway & Universal AI Engine Connectivity Check
+    step("Probing AI Providers & Universal Engine")
     try:
-        req = urllib.request.Request("http://localhost:20128/", headers={"User-Agent": "MunderInstall/1.0"})
-        with urllib.request.urlopen(req, timeout=2) as r:
-            print(f"    -> [ONLINE] OmniRoute responded (HTTP {r.status})")
-    except Exception:
-        print("    -> [NOTE] OmniRoute not detected locally. If installed, run 'OmniRoute.exe'.")
-
-    print("  * Checking FreeLLMAPI at http://127.0.0.1:31415 ...")
-    try:
-        req = urllib.request.Request("http://127.0.0.1:31415/v1/models", headers={"User-Agent": "MunderInstall/1.0"})
-        with urllib.request.urlopen(req, timeout=2) as r:
-            print(f"    -> [ONLINE] FreeLLMAPI responded (HTTP {r.status})")
-    except Exception:
-        print("    -> [NOTE] FreeLLMAPI not detected locally. If installed, run 'FreeLLMAPI.exe'.")
+        from universal_ai_engine import UniversalAIEngine
+        engine = UniversalAIEngine()
+        engine.test_all_providers()
+    except Exception as e:
+        print(f"  [!] Notice during AI probe: {e}")
 
     # 7. Final Summary
     print("\n" + "=" * 70)
@@ -169,7 +161,8 @@ def main():
     print(" Quick Start Commands:")
     print("   1. Interactive Dashboard : python munder_command_center.py")
     print("   2. Run Autonomous Floor : python munder_autonomous_daemon.py")
-    print("   3. One-Click Launcher   : START_MUNDER_DIFFLIN_AUTO.bat (Windows)")
+    print("   3. Probe AI Providers   : python universal_ai_engine.py")
+    print("   4. One-Click Launcher   : START_MUNDER_DIFFLIN_AUTO.bat (Windows)")
     print("=" * 70 + "\n")
 
 if __name__ == "__main__":

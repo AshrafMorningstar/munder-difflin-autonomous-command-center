@@ -2,46 +2,68 @@
 # 🔑 MUNDER DIFFLIN COMMAND CENTER - API KEYS & GATEWAYS TEMPLATE
 # ==============================================================================
 # Instructions:
-# 1. Copy this file and name it 'API_KEYS.txt' (or '.env').
-# 2. Add your keys below.
-# 3. This file is safely excluded from Git by .gitignore.
+# 1. No configuration is required to start! If left blank, the system automatically
+#    uses the Zero-Auth Default AI Engine (Pollinations AI / Free Public Gateway)
+#    with 0 setup, 0 cost, and 0 signups.
+# 2. To use personal / faster cloud tiers, copy this file as 'API_KEYS.txt' (or '.env').
+# 3. Add your personal keys below.
+# 4. 'API_KEYS.txt' is strictly protected and blacklisted by .gitignore.
 # ==============================================================================
 
-[GATEWAYS]
-# OmniRoute AI Gateway (Local OpenAI compatible endpoint)
+[ZERO_AUTH_DEFAULT]
+# 100% Free out-of-the-box, no key required for any new user!
+DEFAULT_ZERO_AUTH_PROVIDER=pollinations
+POLLINATIONS_URL=https://text.pollinations.ai/openai/chat/completions
+POLLINATIONS_MODEL=openai-fast
+
+[LOCAL_AI_GATEWAYS]
+# OmniRoute AI Gateway (Local OpenAI compatible orchestrator)
 # Default port: 20128
 OMNIROUTE_URL=http://localhost:20128/v1
 OMNIROUTE_API_KEY=your_omniroute_key_here
 
-# FreeLLMAPI Unified Gateway (Local Anthropic & OpenAI compatible endpoint)
+# FreeLLMAPI Unified Gateway (Local Anthropic & Codex CLI proxy)
 # Default port: 31415
 FREELLMAPI_URL=http://127.0.0.1:31415
 FREELLMAPI_API_KEY=your_freellmapi_key_here
 
 [DIRECT_CLOUD_PROVIDERS]
-# OpenAI API
-OPENAI_API_KEY=your_openai_api_key_here
-
-# Anthropic Claude API
-ANTHROPIC_API_KEY=your_anthropic_api_key_here
-
-# Google Gemini API (Free tier available)
+# Google Gemini API (Free tier: 15 RPM, 1M TPM)
 GEMINI_API_KEY=your_gemini_api_key_here
 
-# Groq Cloud API (Ultra-fast Llama-3 & Mixtral inference, free tier)
+# Groq Cloud API (Free tier: ultra-fast text & whisper-large-v3-turbo voice)
 GROQ_API_KEY=your_groq_api_key_here
 
-# OpenRouter (Aggregated provider with 50+ free models)
+# OpenAI API (Optional personal key)
+OPENAI_API_KEY=your_openai_api_key_here
+
+# Anthropic Claude API (Optional personal key)
+ANTHROPIC_API_KEY=your_anthropic_api_key_here
+
+# OpenRouter (50+ free models using :free suffix)
 OPENROUTER_API_KEY=your_openrouter_api_key_here
 
-# SambaNova Cloud (High-speed free Llama 3.1 70B & 405B)
+# SambaNova Cloud (Free Llama 3.1 70B & 405B)
 SAMBANOVA_API_KEY=your_sambanova_api_key_here
 
-# SiliconFlow API (Free DeepSeek & Qwen models)
+# SiliconFlow API (Free DeepSeek V3 / R1 & Qwen)
 SILICONFLOW_API_KEY=your_siliconflow_api_key_here
 
-# Cerebras Cloud (World's fastest inference)
+# Cerebras Cloud (High-speed Llama 3.1 8B/70B)
 CEREBRAS_API_KEY=your_cerebras_api_key_here
+
+# Cloudflare Workers AI (10k neurons/day free)
+CLOUDFLARE_ACCOUNT_ID=your_account_id_here
+CLOUDFLARE_API_TOKEN=your_api_token_here
+
+# Mistral AI (Free La Plateforme tier)
+MISTRAL_API_KEY=your_mistral_api_key_here
+
+# Hugging Face Inference API (Free serverless models)
+HUGGINGFACE_API_KEY=your_hf_token_here
+
+# Cohere API (Free trial tier for Command-R)
+COHERE_API_KEY=your_cohere_key_here
 
 [OFFICE_FLOOR_SETTINGS]
 # Path to your Munder Difflin multi-agent hive workspace

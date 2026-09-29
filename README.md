@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🏢 Munder Difflin Autonomous Command Center
+#  Munder Difflin Autonomous Command Center
 ### *100% Zero-Click Autonomous Multi-Agent Office Floor & AI Gateway Orchestrator*
 
 [![Live Website](https://img.shields.io/badge/Live_Portal-Online-00f2fe?style=for-the-badge&logo=googlechrome&logoColor=black)](https://ashrafmorningstar.github.io/munder-difflin-autonomous-command-center/)
@@ -21,7 +21,7 @@
 ```
 **Turn any multi-agent workforce into a self-sustaining, self-dispatching, zero-click powerhouse.**
 
-[🌐 Live Web Portal](https://ashrafmorningstar.github.io/munder-difflin-autonomous-command-center/) • [Features](#-key-features) • [Quickstart](#-1-minute-quickstart) • [Architecture](#-architecture) • [Free AI Catalog](#-free-ai-apis-catalog) • [Documentation](#-documentation)
+[ Live Web Portal](https://ashrafmorningstar.github.io/munder-difflin-autonomous-command-center/) • [Features](#-key-features) • [Quickstart](#-1-minute-quickstart) • [Architecture](#-architecture) • [Free AI Catalog](#-free-ai-apis-catalog) • [Documentation](#-documentation)
 
 [![Share on X](https://img.shields.io/badge/Share_on-X_%2F_Twitter-black?style=flat-square&logo=x)](https://twitter.com/intent/tweet?text=Discover%20Munder%20Difflin%20Autonomous%20Command%20Center%20%E2%80%94%20100%25%20zero-click%20multi-agent%20office%20floor%20with%20free%20AI%20gateways%20by%20@AshrafMorningstar&url=https://github.com/AshrafMorningstar/munder-difflin-autonomous-command-center)
 [![Share on LinkedIn](https://img.shields.io/badge/Share_on-LinkedIn-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/AshrafMorningstar/munder-difflin-autonomous-command-center)
@@ -31,29 +31,29 @@
 
 ---
 
-## 🌟 What is Munder Difflin Command Center?
+##  What is Munder Difflin Command Center?
 
 **Munder Difflin Autonomous Command Center** is an industrial-grade autonomous orchestration suite designed to run the **Munder Difflin** multi-agent office floor completely hands-free around the clock.
 
 By integrating **OmniRoute** (OpenAI-compatible multi-provider routing) and **FreeLLMAPI** (Anthropic-compatible unified gateway), this system empowers:
-- 👔 **Michael Scott (God Orchestrator)**: Drains floor backlogs, balances agent task queues, writes to `board.md`, and dispatches tickets automatically.
-- 🛡️ **Dwight Schrute (Security & Gatekeeper)**: Audits gateway health, checks directory lockfiles, and validates system integrity.
-- 💻 **Jim Halpert (Codex & Tooling Engineer)**: Executes code tooling, models health checks, and exercises headless coding agent CLIs.
+-  **Michael Scott (God Orchestrator)**: Drains floor backlogs, balances agent task queues, writes to `board.md`, and dispatches tickets automatically.
+-  **Dwight Schrute (Security & Gatekeeper)**: Audits gateway health, checks directory lockfiles, and validates system integrity.
+-  **Jim Halpert (Codex & Tooling Engineer)**: Executes code tooling, models health checks, and exercises headless coding agent CLIs.
 
 ---
 
-## ⚡ Key Features
+##  Key Features
 
-- 🚀 **100% Zero-Click Autonomy**: Runs unattended 24/7. Auto-detects completed tickets, auto-advances work queues, and handles heartbeats with zero user confirmation clicks.
-- 🔄 **Intelligent AI Gateway Failover**: Routes requests dynamically across **OmniRoute** (`http://localhost:20128`) and **FreeLLMAPI** (`http://127.0.0.1:31415`).
-- ⚡ **Atomic High-Throughput Draining**: Built with atomic `os.replace` filesystem operations capable of draining thousands of backlog messages per second.
-- 🛡️ **Zero-Leak Secret Architecture**: Whitelisted security design guarantees that your actual API keys are never tracked or committed to Git.
-- 📦 **Automated 1-Click Installer**: Automatically configures dependencies, scaffolding directories, and gateway connections across Windows, macOS, and Linux.
-- 🎁 **Includes Free AI APIs Master Catalog**: Complete verified index of zero-card and zero-login free LLM providers (Groq, Gemini, Cerebras, Pollinations, SambaNova, OpenRouter).
+-  **100% Zero-Click Autonomy**: Runs unattended 24/7. Auto-detects completed tickets, auto-advances work queues, and handles heartbeats with zero user confirmation clicks.
+-  **Intelligent AI Gateway Failover**: Routes requests dynamically across **OmniRoute** (`http://localhost:20128`) and **FreeLLMAPI** (`http://127.0.0.1:31415`).
+-  **Atomic High-Throughput Draining**: Built with atomic `os.replace` filesystem operations capable of draining thousands of backlog messages per second.
+-  **Zero-Leak Secret Architecture**: Whitelisted security design guarantees that your actual API keys are never tracked or committed to Git.
+-  **Automated 1-Click Installer**: Automatically configures dependencies, scaffolding directories, and gateway connections across Windows, macOS, and Linux.
+-  **Includes Free AI APIs Master Catalog**: Complete verified index of zero-card and zero-login free LLM providers (Groq, Gemini, Cerebras, Pollinations, SambaNova, OpenRouter).
 
 ---
 
-## 🚀 1-Minute Quickstart
+##  1-Minute Quickstart
 
 ### Automated 1-Click Install:
 
@@ -79,7 +79,7 @@ python munder_autonomous_daemon.py
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```mermaid
 graph TD
@@ -103,11 +103,11 @@ graph TD
 
 ---
 
-## 🎁 Free AI APIs Catalog
+##  Free AI APIs Catalog
 
 This repository ships with a comprehensive, tested guide to 100% free AI APIs:
-- 📄 [FREE_AI_APIS_MASTER_CATALOG.txt](file:///f:/Ashraf/New%20folder/FREE_AI_APIS_MASTER_CATALOG.txt)
-- 📖 [AI_FOR_API_DIRECTORY.md](file:///f:/Ashraf/New%20folder/AI_FOR_API_DIRECTORY.md)
+-  [FREE_AI_APIS_MASTER_CATALOG.txt](file:///f:/Ashraf/New%20folder/FREE_AI_APIS_MASTER_CATALOG.txt)
+-  [AI_FOR_API_DIRECTORY.md](file:///f:/Ashraf/New%20folder/AI_FOR_API_DIRECTORY.md)
 
 ### Top Free Providers Included:
 1. **Groq Cloud**: 30 RPM, 14,400 Requests/day (~10M free tokens/day) on Llama 3.1 & 3.3.
@@ -118,7 +118,7 @@ This repository ships with a comprehensive, tested guide to 100% free AI APIs:
 
 ---
 
-## 💻 CLI Commands Reference
+##  CLI Commands Reference
 
 | Command | Description |
 | :--- | :--- |
@@ -131,7 +131,7 @@ This repository ships with a comprehensive, tested guide to 100% free AI APIs:
 
 ---
 
-## 🔒 Security & Privacy
+##  Security & Privacy
 
 Your credentials and private keys are **100% protected**:
 - `.gitignore` strictly employs a **default-deny whitelist** pattern.
@@ -140,14 +140,14 @@ Your credentials and private keys are **100% protected**:
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions, issues, and feature requests are welcome!
 Feel free to check the [issues page](https://github.com/AshrafMorningstar/munder-difflin-autonomous-command-center/issues).
 
 ---
 
-## 📜 License
+##  License
 
 Distributed under the **MIT License**. See `LICENSE` for more information.
 
@@ -156,5 +156,4 @@ Distributed under the **MIT License**. See `LICENSE` for more information.
 <div align="center">
 <b>Star ⭐ this repository if you find autonomous multi-agent engineering exciting!</b>
 <br>
-Built with ❤️ by <b>Ashraf Morningstar</b> & the <b>Google DeepMind Antigravity Pair</b>
-</div>
+Built with ❤️ by <b>Ashraf Morningstar</b> </div>

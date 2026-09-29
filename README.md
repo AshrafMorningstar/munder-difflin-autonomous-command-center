@@ -3,8 +3,10 @@
 # 🏢 Munder Difflin Autonomous Command Center
 ### *100% Zero-Click Autonomous Multi-Agent Office Floor & AI Gateway Orchestrator*
 
+[![Live Website](https://img.shields.io/badge/Live_Portal-Online-00f2fe?style=for-the-badge&logo=googlechrome&logoColor=black)](https://ashrafmorningstar.github.io/munder-difflin-autonomous-command-center/)
 [![GitHub Stars](https://img.shields.io/github/stars/AshrafMorningstar/munder-difflin-autonomous-command-center?style=for-the-badge&logo=github&color=gold)](https://github.com/AshrafMorningstar/munder-difflin-autonomous-command-center/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![CI Health](https://github.com/AshrafMorningstar/munder-difflin-autonomous-command-center/actions/workflows/ci-health-check.yml/badge.svg)](https://github.com/AshrafMorningstar/munder-difflin-autonomous-command-center/actions)
 [![Python 3.9+](https://img.shields.io/badge/Python-3.9+-3776AB.svg?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![Node 18+](https://img.shields.io/badge/Node.js-18+-339933.svg?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org)
 [![Zero-Click Autonomous](https://img.shields.io/badge/Autonomous-Zero--Click-FF4500.svg?style=for-the-badge&logo=openai&logoColor=white)](#-key-features)
@@ -19,7 +21,11 @@
 ```
 **Turn any multi-agent workforce into a self-sustaining, self-dispatching, zero-click powerhouse.**
 
-[Features](#-key-features) • [Quickstart](#-1-minute-quickstart) • [Architecture](#-architecture) • [Free AI Catalog](#-free-ai-apis-catalog) • [Documentation](#-documentation)
+[🌐 Live Web Portal](https://ashrafmorningstar.github.io/munder-difflin-autonomous-command-center/) • [Features](#-key-features) • [Quickstart](#-1-minute-quickstart) • [Architecture](#-architecture) • [Free AI Catalog](#-free-ai-apis-catalog) • [Documentation](#-documentation)
+
+[![Share on X](https://img.shields.io/badge/Share_on-X_%2F_Twitter-black?style=flat-square&logo=x)](https://twitter.com/intent/tweet?text=Discover%20Munder%20Difflin%20Autonomous%20Command%20Center%20%E2%80%94%20100%25%20zero-click%20multi-agent%20office%20floor%20with%20free%20AI%20gateways%20by%20@AshrafMorningstar&url=https://github.com/AshrafMorningstar/munder-difflin-autonomous-command-center)
+[![Share on LinkedIn](https://img.shields.io/badge/Share_on-LinkedIn-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/AshrafMorningstar/munder-difflin-autonomous-command-center)
+[![Share on Reddit](https://img.shields.io/badge/Share_on-Reddit-FF4500?style=flat-square&logo=reddit)](https://www.reddit.com/submit?url=https://github.com/AshrafMorningstar/munder-difflin-autonomous-command-center&title=Munder%20Difflin%20Autonomous%20Command%20Center)
 
 </div>
 

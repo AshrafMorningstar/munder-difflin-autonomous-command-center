@@ -1,0 +1,45 @@
+name: CI & Health Verification
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Lint and syntax verification
+        run: |
+          python -m py_compile munder_autonomous_daemon.py
+          python -m py_compile munder_command_center.py
+          python -m py_compile install.py
+          python -m py_compile MUNDER_DIFFLIN_AUTONOMOUS_DAEMON.py
+
+      - name: Security & zero-leak audit check
+        run: |
+          python -c "
+          import os
+          files = ['munder_autonomous_daemon.py', 'munder_command_center.py', 'install.py', 'README.md']
+          for f in files:
+              if os.path.exists(f):
+                  with open(f, 'r') as fp:
+                      content = fp.read()
+                      assert 'sk-384f7a' not in content, f'Secret leak in {f}'
+                      assert 'gsk_TLY' not in content, f'Secret leak in {f}'
+          print('Security validation passed cleanly!')
+          "

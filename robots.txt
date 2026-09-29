@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ashrafmorningstar.github.io/munder-difflin-autonomous-command-center/sitemap.xml

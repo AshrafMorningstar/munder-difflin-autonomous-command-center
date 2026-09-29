@@ -34,6 +34,15 @@
 !API_KEYS_TEMPLATE.txt
 !API_KEYS.example.env
 
+# Whitelist SEO Web Landing Page and Search Engine Files
+!index.html
+!sitemap.xml
+!robots.txt
+
+# Whitelist GitHub Actions and community files
+!.github/
+!.github/**
+
 # Whitelist git files
 !.gitignore
 

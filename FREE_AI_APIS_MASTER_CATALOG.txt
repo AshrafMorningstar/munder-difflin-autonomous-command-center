@@ -1,0 +1,134 @@
+================================================================================
+⚡ FREE AI APIS & PROVIDERS MASTER CATALOG (NO CREDIT CARD / NO LOGIN REQUIRED)
+================================================================================
+Generated for: Munder Difflin Autonomous Command Center & AI Gateway Integration
+Last Updated: 2026-09-29
+Status: 100% Verified Working
+
+================================================================================
+[SECTION 1: ZERO-LOGIN & ZERO-AUTHENTICATION APIS (INSTANT PUBLIC ACCESS)]
+================================================================================
+These endpoints require NO account, NO login, NO email, and NO credit card.
+You can invoke them immediately via cURL or in any HTTP client.
+
+1. Pollinations AI (Text & Code)
+   - Endpoint: https://text.pollinations.ai/openai/chat/completions
+   - Auth: None (No key needed)
+   - Protocol: OpenAI Compatible
+   - Models: openai-fast, mistral, qwen, deepseek
+   - Quick cURL:
+     curl -X POST https://text.pollinations.ai/openai/chat/completions \
+       -H "Content-Type: application/json" \
+       -d '{"messages":[{"role":"user","content":"Hello world"}],"model":"openai-fast"}'
+
+2. Pollinations AI (Image Generation)
+   - Endpoint: https://image.pollinations.ai/prompt/{YOUR_PROMPT}
+   - Auth: None
+   - Formats: Directly streams JPEG/PNG image bytes
+   - Models: flux, flux-realism, sdxl
+
+3. OpenCode Zen Free API
+   - Endpoint: https://opencode.ai/zen/v1/chat/completions
+   - Auth: Bearer open (or leave empty)
+   - Models: kimi-k2.5, glm-4.7, qwen2.5-coder
+
+4. AI Horde Distributed GPU Grid
+   - Endpoint: https://aihorde.net/api/v2/generate/text/async
+   - Auth: API-Key: 0000000000 (Anonymous zero-login key)
+   - Models: llama-3.3-70b, cydonia-24b, mistral-small
+
+5. Jina AI Reader (Web-to-Markdown Scraper for LLM RAG)
+   - Endpoint: https://r.jina.ai/{URL}
+   - Auth: None required for up to 20 RPM
+   - Example: curl -s https://r.jina.ai/https://news.ycombinator.com
+
+================================================================================
+[SECTION 2: PERMANENTLY FREE CLOUD PROVIDERS (NO CREDIT CARD REQUIRED)]
+================================================================================
+Sign up with 1-click GitHub or Google account. NO credit card asked ever.
+
+1. Groq Cloud (Ultra-Fast Hardware LPU)
+   - Console: https://console.groq.com
+   - Free Quota:
+     * llama-3.1-8b-instant: 30 RPM, 14,400 Requests/day (10M+ tokens/day!)
+     * llama-3.3-70b-versatile: 30 RPM, 1,000 Requests/day
+     * gemma2-9b-it: 30 RPM, 14,400 Requests/day
+     * whisper-large-v3: Unlimited free audio transcription
+   - Endpoint: https://api.groq.com/openai/v1/chat/completions
+
+2. Google Gemini (Google AI Studio)
+   - Console: https://aistudio.google.com
+   - Free Quota:
+     * gemini-2.5-flash: 15 RPM, 1,500 Requests/day, 1,000,000 TPM
+     * gemini-3.1-flash-lite: 15 RPM, 1,500 Requests/day
+   - Context Window: 1 Million tokens per request free!
+   - Endpoint: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
+
+3. Cerebras Cloud (World's Fastest Inference)
+   - Console: https://inference.cerebras.ai
+   - Free Quota: 30 RPM, 1M tokens/day of Llama 3.1 70B & 8B at ~2,000 tps.
+   - Endpoint: https://api.cerebras.ai/v1/chat/completions
+
+4. SambaNova Cloud
+   - Console: https://cloud.sambanova.ai
+   - Free Quota: Uncapped access to Meta-Llama-3.1-405B-Instruct & 70B.
+   - Endpoint: https://api.sambanova.ai/v1/chat/completions
+
+5. SiliconFlow
+   - Console: https://cloud.siliconflow.cn
+   - Free Quota: Permanently free Qwen-2.5-Coder-32B, DeepSeek-V3, GLM-4.
+   - Endpoint: https://api.siliconflow.cn/v1/chat/completions
+
+6. OpenRouter Free Tier
+   - Console: https://openrouter.ai
+   - Free Models: over 50 completely free model variants ending with :free
+     * meta-llama/llama-3.3-70b-instruct:free
+     * deepseek/deepseek-chat:free
+     * google/gemini-2.0-flash-exp:free
+     * mistralai/mistral-7b-instruct:free
+   - Endpoint: https://openrouter.ai/api/v1/chat/completions
+
+================================================================================
+[SECTION 3: LOCAL AGGREGATORS & GATEWAYS]
+================================================================================
+1. OmniRoute Gateway
+   - Local URL: http://localhost:20128/v1
+   - Protocol: OpenAI-Compatible
+   - Features: Intelligent model pooling, failover cascades, token accounting.
+   - Virtual Auto Models:
+     * auto/best-free (routes to highest health free provider)
+     * auto/best-coding (routes to optimal coding model)
+
+2. FreeLLMAPI Gateway
+   - Local URL: http://127.0.0.1:31415
+   - Protocol: Anthropic & OpenAI Compatible
+   - Features: 1-click hooks into Claude Code CLI, Codex, OpenCode, Aider.
+   - Commands:
+     * npx freellmapi setup-claude --url http://127.0.0.1:31415 --api-key <KEY>
+     * npx freellmapi setup-codex --url http://127.0.0.1:31415 --api-key <KEY>
+
+================================================================================
+[SECTION 4: QUICK INTEGRATION PYTHON CODE SNIPPET]
+================================================================================
+```python
+import os, json, urllib.request
+
+def ask_free_ai(prompt, model="auto/best-free", base_url="http://localhost:20128/v1"):
+    url = f"{base_url}/chat/completions"
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {os.getenv('OMNIROUTE_API_KEY', 'free')}"
+    }
+    data = {
+        "model": model,
+        "messages": [{"role": "user", "content": prompt}]
+    }
+    req = urllib.request.Request(url, headers=headers, data=json.dumps(data).encode())
+    with urllib.request.urlopen(req) as resp:
+        res = json.loads(resp.read().decode())
+        return res['choices'][0]['message']['content']
+
+if __name__ == "__main__":
+    print(ask_free_ai("Write an autonomous agent worker loop in Python"))
+```
+================================================================================
